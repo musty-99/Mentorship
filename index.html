@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <td>ID</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Active</td>
+      </thead>
+
+      <tbody id="student-record"></tbody>
+    </table>
+
+    <button id="add-student">Add New Student</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const studentRecordElement = document.getElementById("student-record");
+        // Say that we got students from an API
+        const students = [
+          { id: 12, firstName: "Abudu", lastName: "Kasali", active: true },
+          { id: 12, firstName: "Abudu", lastName: "Kasali", active: true },
+          { id: 12, firstName: "Abudu", lastName: "Kasali", active: true },
+        ];
+
+        students.forEach((student) => {
+          const tableRow = document.createElement("tr");
+
+          const idElement = `<td>${student.id}</td>`;
+          tableRow.innerHTML = idElement;
+
+          const firstNameElement = document.createElement("td");
+          firstNameElement.innerText = student.firstName;
+          tableRow.appendChild(firstNameElement);
+
+          const lastNameElement = document.createElement("td");
+          lastNameElement.innerText = student.lastName;
+          tableRow.appendChild(lastNameElement);
+
+          const activeElement = document.createElement("td");
+          activeElement.innerText = student.active;
+          tableRow.appendChild(activeElement);
+
+          studentRecordElement.appendChild(tableRow);
+        });
+
+        const addStudent = document.getElementById("add-student");
+        addStudent.addEventListener("mouseout", () => {
+          alert("We don't allow adding students now");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- https://developer.mozilla.org/en-US/ -->
