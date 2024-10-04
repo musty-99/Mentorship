@@ -1,0 +1,56 @@
+body {
+  background-color: cyan;
+  display: flex;
+  height: 100vh;
+}
+
+.gameboy {
+  width: 350px;
+  background-color: white;
+  height: 500px;
+  margin: 0 auto;
+  align-self: center;
+  border-radius: 10px 10px 60px 10px;
+}
+
+.gameboy .screen {
+  height: 40%;
+  width: 80%;
+  background-color: #787878;
+  margin: 10% auto 0;
+  border-radius: 5px 5px 35px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameboy .inner-screen {
+  background-color: #beb057;
+  height: 70%;
+  width: 65%;
+}
+
+.gameboy .battery {
+  position: relative;
+  left: -25px;
+  top: -30px;
+  display: flex;
+  justify-content: center;
+}
+
+.gameboy .battery-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #b28080;
+  position: absolute;
+}
+
+.gameboy .battery-text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 8px;
+  font-weight: 100;
+  top: 5px;
+  position: absolute;
+}
